@@ -1,4 +1,4 @@
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
@@ -13,10 +13,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: ja_JP\n"
+"X-Source-Language: C\n"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:11
 msgid "Map Rendering and Printing"
-msgstr ""
+msgstr "地図のレンダリングと印刷"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:13
 msgid ""
@@ -25,10 +27,12 @@ msgid ""
 "fine-tuned output by composing the map with :class:`QgsComposition` class "
 "and friends."
 msgstr ""
+"入力したデータを地図としてレンダリングするには、主に二つの方法があります。手早くやるには :class:`QgsMapRenderer` "
+"を使い、より手の込んだ地図を作成するのであれば :class:`QgsComposition` とその周辺を使用します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:20
 msgid "Simple Rendering"
-msgstr ""
+msgstr "シンプルなレンダリング"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:22
 msgid ""
@@ -36,20 +40,25 @@ msgid ""
 "device (``QImage``, ``QPainter`` etc.), set up layer set, extent, output "
 "size and do the rendering::"
 msgstr ""
+"いくつかのレイヤを :class:`QgsMapRenderer`を使ってレンダリングしてみてください。描画デバイスを (``QImage``, "
+"``QPainter`` など) とし、レイヤーセットを extent に設定した上で、出力サイズを指定してレンダリングしてください。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:63
 msgid "Output using Map Composer"
-msgstr ""
+msgstr "Map Composer を使って出力する"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:65
 msgid ""
 "Map composer is a very handy tool if you would like to do a more "
 "sophisticated output than the simple rendering shown above. Using the "
 "composer it is possible to create complex map layouts consisting of map "
-"views, labels, legend, tables and other elements that are usually present on"
-" paper maps. The layouts can be then exported to PDF, raster images or "
+"views, labels, legend, tables and other elements that are usually present on "
+"paper maps. The layouts can be then exported to PDF, raster images or "
 "directly printed on a printer."
 msgstr ""
+"Ma composer は通常のレンダリングよりも洒落た出力を得るには大変便利なツールです。Map "
+"composerを使うと、地図の複雑なビューや、ラベル、凡例、テーブル、その他紙の地図で使用する様々な要素をレイアウトできます。その出力を PDF "
+"やラスタ画像にエクスポートしたり、直接印刷することもできます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:71
 msgid ""
@@ -61,12 +70,19 @@ msgid ""
 "encouraged to check the documentation now, because the composer is based on "
 "it."
 msgstr ""
+"Map composerはいくつものクラスを集めたものです。全てのクラスはコアライブラリに属しています。QGIS "
+"アプリケーションでは要素を配置するのに便利な GUI を持っていますが、これらをgui ライブラリで見る方法はありません。Map composerは "
+"`Qt Graphics View framework "
+"<http://doc.qt.nokia.com/stable/graphicsview.html>`_ をベースに作成しているので、`Qt "
+"Graphics View framework` にあまりなじみが無いのでしたら、まずドキュメントを読むことをお勧めします。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:78
 msgid ""
 "The central class of the composer is :class:`QgsComposition` which is "
 "derived from :class:`QGraphicsScene`. Let us create one::"
 msgstr ""
+"composer の中心となるクラスは :class:`QgsComposition` です。これは "
+":class:`QGraphicsScene`.の子クラスです。一つ作ってみましょう。::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:85
 msgid ""
@@ -82,8 +98,8 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:93
 msgid ""
 "It is possible to add various elements (map, label, ...) to the composition "
-"--- these elements have to be descendants of :class:`QgsComposerItem` class."
-" Currently supported items are:"
+"--- these elements have to be descendants of :class:`QgsComposerItem` class. "
+"Currently supported items are:"
 msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:97
@@ -125,20 +141,19 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:134
 msgid ""
 "By default the newly created composer items have zero position (top left "
-"corner of the page) and zero size. The position and size are always measured"
-" in millimeters::"
+"corner of the page) and zero size. The position and size are always measured "
+"in millimeters::"
 msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:143
-msgid ""
-"A frame is drawn around each item by default. How to remove the frame::"
+msgid "A frame is drawn around each item by default. How to remove the frame::"
 msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/composer.rst:148
 msgid ""
 "Besides creating the composer items by hand, QGIS has support for composer "
-"templates which are essentially compositions with all their items saved to a"
-" .qpt file (with XML syntax). Unfortunately this functionality is not yet "
+"templates which are essentially compositions with all their items saved to a "
+".qpt file (with XML syntax). Unfortunately this functionality is not yet "
 "available in the API."
 msgstr ""
 
